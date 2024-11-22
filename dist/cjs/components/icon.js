@@ -5,7 +5,7 @@
 var classNames = require('classnames');
 var React = require('react');
 var icon_module = require('./icon.module.css.js');
-var final = require('src/assets/icons/final');
+var index = require('../assets/icons/final/index.js');
 
 const IconFallback = () => /* @__PURE__ */ React.createElement("svg", { width: "1em", height: "1em" });
 const Icon = React.forwardRef(function Icon2(props, ref) {
@@ -17,7 +17,7 @@ const Icon = React.forwardRef(function Icon2(props, ref) {
   if (name === "empty") {
     children = /* @__PURE__ */ React.createElement(IconFallback, null);
   } else {
-    const lazyIcon = final.icons[name];
+    const lazyIcon = index.icons[name];
     if (!lazyIcon) {
       console.warn(`Icon rendered with invalid name: ${name}`);
       return null;

@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import React__default, { lazy, Suspense } from 'react';
 import styles from './icon.module.css.js';
-import { icons } from 'src/assets/icons/final';
+import { icons } from '../assets/icons/final/index.js';
 
 const IconFallback = () => /* @__PURE__ */ React__default.createElement("svg", { width: "1em", height: "1em" });
 const Icon = React__default.forwardRef(function Icon2(props, ref) {
