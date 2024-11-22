@@ -5,5 +5,5 @@ export declare const Indicator: import("react").ForwardRefExoticComponent<RadixR
 export declare const RadioGroup: import("react").ForwardRefExoticComponent<RadixRadioGroup.RadioGroupProps & import("react").RefAttributes<HTMLDivElement>>;
 export declare const RadioGroupItem: import("react").ForwardRefExoticComponent<RadixRadioGroup.RadioGroupItemProps & import("react").RefAttributes<HTMLButtonElement>>;
 export declare const RadioGroupIndicator: import("react").ForwardRefExoticComponent<RadixRadioGroup.RadioGroupIndicatorProps & import("react").RefAttributes<HTMLSpanElement>>;
-export declare const createRadioGroupScope: import("@radix-ui/react-context").CreateScope;
+export declare const createRadioGroupScope: CreateScope;
 //# sourceMappingURL=radio-group.d.ts.map

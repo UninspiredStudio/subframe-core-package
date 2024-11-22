@@ -3,6 +3,6 @@ export declare const Checkbox: import("react").ForwardRefExoticComponent<RadixCh
 export declare const CheckboxIndicator: import("react").ForwardRefExoticComponent<RadixCheckbox.CheckboxIndicatorProps & import("react").RefAttributes<HTMLSpanElement>>;
 export declare const Indicator: import("react").ForwardRefExoticComponent<RadixCheckbox.CheckboxIndicatorProps & import("react").RefAttributes<HTMLSpanElement>>;
 export declare const Root: import("react").ForwardRefExoticComponent<RadixCheckbox.CheckboxProps & import("react").RefAttributes<HTMLButtonElement>>;
-export declare const createCheckboxScope: import("@radix-ui/react-context").CreateScope;
+export declare const createCheckboxScope: CreateScope;
 export type CheckedState = RadixCheckbox.CheckedState;
 //# sourceMappingURL=checkbox.d.ts.map
