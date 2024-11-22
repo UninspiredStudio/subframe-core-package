@@ -63,15 +63,8 @@ const Value = React.forwardRef(function Value2({
   );
 });
 const Content = React.forwardRef(
-  function Content2({
-    className,
-    children,
-    portalClassName,
-    position = "popper",
-    sideOffset = 4,
-    ...otherProps
-  }, ref) {
-    return /* @__PURE__ */ React.createElement(RadixSelect__namespace.Portal, { className: portalClassName }, /* @__PURE__ */ React.createElement(
+  function Content2({ className, children, position = "popper", sideOffset = 4, ...otherProps }, ref) {
+    return /* @__PURE__ */ React.createElement(RadixSelect__namespace.Portal, null, /* @__PURE__ */ React.createElement(
       RadixSelect__namespace.Content,
       {
         className: classNames(className, select_module.content),

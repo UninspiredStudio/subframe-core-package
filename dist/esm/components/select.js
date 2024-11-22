@@ -42,15 +42,8 @@ const Value = React__default.forwardRef(function Value2({
   );
 });
 const Content = React__default.forwardRef(
-  function Content2({
-    className,
-    children,
-    portalClassName,
-    position = "popper",
-    sideOffset = 4,
-    ...otherProps
-  }, ref) {
-    return /* @__PURE__ */ React__default.createElement(RadixSelect.Portal, { className: portalClassName }, /* @__PURE__ */ React__default.createElement(
+  function Content2({ className, children, position = "popper", sideOffset = 4, ...otherProps }, ref) {
+    return /* @__PURE__ */ React__default.createElement(RadixSelect.Portal, null, /* @__PURE__ */ React__default.createElement(
       RadixSelect.Content,
       {
         className: classNames(className, styles.content),
