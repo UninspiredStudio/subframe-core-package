@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 'use strict';
 
@@ -7,14 +8,38 @@ var recharts = require('recharts');
 var charts = require('./charts.js');
 var pieChart_module = require('./pie-chart.module.css.js');
 
-const PieChart = React.forwardRef(function PieChart({ className, category, colors = charts.DEFAULT_COLORS, dark, data, index, tooltip = React.createElement(charts.ChartTooltip, null), legend = React.createElement(charts.ChartLegend, null), children = (React.createElement(recharts.Pie, { className: classNames(pieChart_module.pie, { [pieChart_module.dark]: dark }), data: data, cx: "50%", cy: "50%", startAngle: 90, endAngle: -270, innerRadius: "75%", isAnimationActive: false, outerRadius: "100%", dataKey: category, nameKey: index }, data.map((_, index) => {
-    return React.createElement(recharts.Cell, { key: index, fill: colors[index % colors.length] });
-}))), margin, ...otherProps }, ref) {
-    return (React.createElement(charts.ChartContextProvider, { categories: data.map((obj) => obj[index]), colors: colors, dark: dark },
-        React.createElement(charts.AutoSizedChartWrapper, { ref: ref, ...otherProps }, ({ height, width }) => (React.createElement(recharts.PieChart, { data: data, height: height, width: width, margin: margin },
-            tooltip,
-            legend,
-            children)))));
+const PieChart = React.forwardRef(function PieChart2({
+  className,
+  category,
+  colors = charts.DEFAULT_COLORS,
+  dark,
+  data,
+  index,
+  tooltip = /* @__PURE__ */ React.createElement(charts.ChartTooltip, null),
+  legend = /* @__PURE__ */ React.createElement(charts.ChartLegend, null),
+  children = /* @__PURE__ */ React.createElement(
+    recharts.Pie,
+    {
+      className: classNames(pieChart_module.pie, { [pieChart_module.dark]: dark }),
+      data,
+      cx: "50%",
+      cy: "50%",
+      startAngle: 90,
+      endAngle: -270,
+      innerRadius: "75%",
+      isAnimationActive: false,
+      outerRadius: "100%",
+      dataKey: category,
+      nameKey: index
+    },
+    data.map((_, index2) => {
+      return /* @__PURE__ */ React.createElement(recharts.Cell, { key: index2, fill: colors[index2 % colors.length] });
+    })
+  ),
+  margin,
+  ...otherProps
+}, ref) {
+  return /* @__PURE__ */ React.createElement(charts.ChartContextProvider, { categories: data.map((obj) => obj[index]), colors, dark }, /* @__PURE__ */ React.createElement(charts.AutoSizedChartWrapper, { ref, ...otherProps }, ({ height, width }) => /* @__PURE__ */ React.createElement(recharts.PieChart, { data, height, width, margin }, tooltip, legend, children)));
 });
 
 exports.PieChart = PieChart;

@@ -1,3 +1,4 @@
+"use strict";
 import * as checkbox from './components/radix/checkbox.js';
 export { checkbox as Checkbox };
 import * as contextMenu from './components/radix/context-menu.js';

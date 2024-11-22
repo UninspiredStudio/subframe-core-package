@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixHoverCard from '@radix-ui/react-hover-card';
 

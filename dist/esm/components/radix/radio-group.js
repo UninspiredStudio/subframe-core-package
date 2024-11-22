@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixRadioGroup from '@radix-ui/react-radio-group';
 

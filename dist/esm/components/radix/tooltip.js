@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixTooltip from '@radix-ui/react-tooltip';
 

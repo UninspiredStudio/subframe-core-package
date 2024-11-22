@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixCheckbox from '@radix-ui/react-checkbox';
 

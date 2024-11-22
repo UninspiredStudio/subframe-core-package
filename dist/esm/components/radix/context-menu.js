@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixContextMenu from '@radix-ui/react-context-menu';
 

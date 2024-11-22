@@ -1,3 +1,4 @@
+"use strict";
 'use strict';
 
 var checkbox = require('./components/radix/checkbox.js');

@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu';
 

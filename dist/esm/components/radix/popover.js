@@ -1,3 +1,4 @@
+"use strict";
 "use client";
 import * as RadixPopover from '@radix-ui/react-popover';
 
