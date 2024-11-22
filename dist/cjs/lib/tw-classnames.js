@@ -1,14 +1,10 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SUBFRAME_FONT_MIXINS = void 0;
-exports.twClassNames = twClassNames;
-const classnames_1 = __importDefault(require("classnames"));
-const tailwind_merge_1 = require("tailwind-merge");
+'use strict';
+
+var classNames = require('classnames');
+var tailwindMerge = require('tailwind-merge');
+
 // HACK: keep this in sync with the default fonts
-exports.SUBFRAME_FONT_MIXINS = [
+const SUBFRAME_FONT_MIXINS = [
     // old font mixins
     "text-label",
     "text-label-bold",
@@ -25,14 +21,14 @@ exports.SUBFRAME_FONT_MIXINS = [
     "text-heading-2",
     "text-heading-1",
 ];
-const customTWMerge = (0, tailwind_merge_1.createTailwindMerge)(() => {
-    const defaultConfig = (0, tailwind_merge_1.getDefaultConfig)();
+const customTWMerge = tailwindMerge.createTailwindMerge(() => {
+    const defaultConfig = tailwindMerge.getDefaultConfig();
     return {
         ...defaultConfig,
         classGroups: {
             ...defaultConfig.classGroups,
             // "subframe-colors": [{ text: [isTextColor] }],
-            "subframe-font-mixins": exports.SUBFRAME_FONT_MIXINS,
+            "subframe-font-mixins": SUBFRAME_FONT_MIXINS,
             // "font-size": [{ text: [isFontStyle] }, ...defaultConfig.classGroups["font-size"]],
             // leading: [{ text: [isFontStyle] }, ...defaultConfig.classGroups.leading],
             // "font-weight": [{ text: [isFontStyle] }, ...defaultConfig.classGroups["font-weight"]],
@@ -49,5 +45,9 @@ const customTWMerge = (0, tailwind_merge_1.createTailwindMerge)(() => {
     };
 });
 function twClassNames(...args) {
-    return customTWMerge((0, classnames_1.default)(...args));
+    return customTWMerge(classNames(...args));
 }
+
+exports.SUBFRAME_FONT_MIXINS = SUBFRAME_FONT_MIXINS;
+exports.twClassNames = twClassNames;
+//# sourceMappingURL=tw-classnames.js.map

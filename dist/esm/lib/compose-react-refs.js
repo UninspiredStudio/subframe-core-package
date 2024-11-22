@@ -1,4 +1,4 @@
-export function composeRefs(...refs) {
+function composeRefs(...refs) {
     if (refs.length === 2) {
         // micro-optimize the hot path
         return composeTwoRefs(refs[0], refs[1]) || null;
@@ -33,7 +33,9 @@ function updateRef(ref, instance) {
         ref(instance);
     }
     else {
-        ;
         ref.current = instance;
     }
 }
+
+export { composeRefs };
+//# sourceMappingURL=compose-react-refs.js.map

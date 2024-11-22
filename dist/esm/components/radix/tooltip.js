@@ -1,15 +1,19 @@
 "use client";
-import * as RadixTooltip from "@radix-ui/react-tooltip";
-export const Root = RadixTooltip.Root;
-export const Tooltip = RadixTooltip.Tooltip;
-export const TooltipArrow = RadixTooltip.TooltipArrow;
-export const TooltipContent = RadixTooltip.TooltipContent;
-export const TooltipPortal = RadixTooltip.TooltipPortal;
-export const TooltipProvider = RadixTooltip.TooltipProvider;
-export const TooltipTrigger = RadixTooltip.TooltipTrigger;
-export const Arrow = RadixTooltip.Arrow;
-export const Content = RadixTooltip.Content;
-export const Portal = RadixTooltip.Portal;
-export const Provider = RadixTooltip.Provider;
-export const Trigger = RadixTooltip.Trigger;
-export const createTooltipScope = RadixTooltip.createTooltipScope;
+import * as RadixTooltip from '@radix-ui/react-tooltip';
+
+const Root = RadixTooltip.Root;
+const Tooltip = RadixTooltip.Tooltip;
+const TooltipArrow = RadixTooltip.TooltipArrow;
+const TooltipContent = RadixTooltip.TooltipContent;
+const TooltipPortal = RadixTooltip.TooltipPortal;
+const TooltipProvider = RadixTooltip.TooltipProvider;
+const TooltipTrigger = RadixTooltip.TooltipTrigger;
+const Arrow = RadixTooltip.Arrow;
+const Content = RadixTooltip.Content;
+const Portal = RadixTooltip.Portal;
+const Provider = RadixTooltip.Provider;
+const Trigger = RadixTooltip.Trigger;
+const createTooltipScope = RadixTooltip.createTooltipScope;
+
+export { Arrow, Content, Portal, Provider, Root, Tooltip, TooltipArrow, TooltipContent, TooltipPortal, TooltipProvider, TooltipTrigger, Trigger, createTooltipScope };
+//# sourceMappingURL=tooltip.js.map

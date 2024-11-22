@@ -1,5 +1,0 @@
-import * as React from "react";
-import type { SVGProps } from "react";
-declare const SvgFeatherAlarmPlus: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default SvgFeatherAlarmPlus;
-//# sourceMappingURL=feather-alarm-plus.d.ts.map

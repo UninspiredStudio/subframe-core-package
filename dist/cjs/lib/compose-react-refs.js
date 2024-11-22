@@ -1,6 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.composeRefs = composeRefs;
+'use strict';
+
 function composeRefs(...refs) {
     if (refs.length === 2) {
         // micro-optimize the hot path
@@ -36,7 +35,9 @@ function updateRef(ref, instance) {
         ref(instance);
     }
     else {
-        ;
         ref.current = instance;
     }
 }
+
+exports.composeRefs = composeRefs;
+//# sourceMappingURL=compose-react-refs.js.map

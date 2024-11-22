@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherFingerprint = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4" }),
     React.createElement("path", { d: "M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2" }),
@@ -9,4 +10,6 @@ const SvgFeatherFingerprint = (props) => (React.createElement("svg", { xmlns: "h
     React.createElement("path", { d: "M2 16h.01" }),
     React.createElement("path", { d: "M21.8 16c.2-2 .131-5.354 0-6" }),
     React.createElement("path", { d: "M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2" })));
-export default SvgFeatherFingerprint;
+
+export { SvgFeatherFingerprint as default };
+//# sourceMappingURL=feather-fingerprint.js.map

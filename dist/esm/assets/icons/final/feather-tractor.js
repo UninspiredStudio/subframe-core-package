@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherTractor = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M3 4h9l1 7" }),
     React.createElement("path", { d: "M4 11V4" }),
@@ -9,4 +10,6 @@ const SvgFeatherTractor = (props) => (React.createElement("svg", { xmlns: "http:
     React.createElement("circle", { cx: 7, cy: 15, r: 5 }),
     React.createElement("path", { d: "M16 18h-5" }),
     React.createElement("circle", { cx: 18, cy: 18, r: 2 })));
-export default SvgFeatherTractor;
+
+export { SvgFeatherTractor as default };
+//# sourceMappingURL=feather-tractor.js.map

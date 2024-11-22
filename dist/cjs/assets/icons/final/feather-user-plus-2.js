@@ -1,32 +1,31 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
+'use strict';
+
+var React = require('react');
+
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
     }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const React = __importStar(require("react"));
-const SvgFeatherUserPlus2 = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
-    React.createElement("path", { d: "M14 19a6 6 0 0 0-12 0" }),
-    React.createElement("circle", { cx: 8, cy: 9, r: 4 }),
-    React.createElement("line", { x1: 19, x2: 19, y1: 8, y2: 14 }),
-    React.createElement("line", { x1: 22, x2: 16, y1: 11, y2: 11 })));
-exports.default = SvgFeatherUserPlus2;
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var React__namespace = /*#__PURE__*/_interopNamespaceDefault(React);
+
+const SvgFeatherUserPlus2 = (props) => (React__namespace.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
+    React__namespace.createElement("path", { d: "M14 19a6 6 0 0 0-12 0" }),
+    React__namespace.createElement("circle", { cx: 8, cy: 9, r: 4 }),
+    React__namespace.createElement("line", { x1: 19, x2: 19, y1: 8, y2: 14 }),
+    React__namespace.createElement("line", { x1: 22, x2: 16, y1: 11, y2: 11 })));
+
+module.exports = SvgFeatherUserPlus2;
+//# sourceMappingURL=feather-user-plus-2.js.map

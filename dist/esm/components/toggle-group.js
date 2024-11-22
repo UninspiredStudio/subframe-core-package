@@ -1,8 +1,12 @@
 "use client";
-import * as RadixToggleGroup from "@radix-ui/react-toggle-group";
-import React from "react";
-export const Root = React.forwardRef(function Root({ className, type = "single", ...otherProps }, ref) {
-    return React.createElement(RadixToggleGroup.Root, { ref: ref, className: className, type: type, ...otherProps });
+import * as RadixToggleGroup from '@radix-ui/react-toggle-group';
+import React__default from 'react';
+
+const Root = React__default.forwardRef(function Root({ className, type = "single", ...otherProps }, ref) {
+    return React__default.createElement(RadixToggleGroup.Root, { ref: ref, className: className, type: type, ...otherProps });
 });
-export const Item = RadixToggleGroup.Item;
-export const ToggleGroup = { Root, Item };
+const Item = RadixToggleGroup.Item;
+const ToggleGroup = { Root, Item };
+
+export { Item, Root, ToggleGroup };
+//# sourceMappingURL=toggle-group.js.map

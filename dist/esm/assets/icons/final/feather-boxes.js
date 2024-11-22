@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherBoxes = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" }),
     React.createElement("path", { d: "m7 16.5-4.74-2.85" }),
@@ -12,4 +13,6 @@ const SvgFeatherBoxes = (props) => (React.createElement("svg", { xmlns: "http://
     React.createElement("path", { d: "M12 8 7.26 5.15" }),
     React.createElement("path", { d: "m12 8 4.74-2.85" }),
     React.createElement("path", { d: "M12 13.5V8" })));
-export default SvgFeatherBoxes;
+
+export { SvgFeatherBoxes as default };
+//# sourceMappingURL=feather-boxes.js.map

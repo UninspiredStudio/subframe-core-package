@@ -1,9 +1,13 @@
 "use client";
-import * as RadixRadioGroup from "@radix-ui/react-radio-group";
-export const Root = RadixRadioGroup.Root;
-export const Item = RadixRadioGroup.Item;
-export const Indicator = RadixRadioGroup.Indicator;
-export const RadioGroup = RadixRadioGroup.RadioGroup;
-export const RadioGroupItem = RadixRadioGroup.RadioGroupItem;
-export const RadioGroupIndicator = RadixRadioGroup.RadioGroupIndicator;
-export const createRadioGroupScope = RadixRadioGroup.createRadioGroupScope;
+import * as RadixRadioGroup from '@radix-ui/react-radio-group';
+
+const Root = RadixRadioGroup.Root;
+const Item = RadixRadioGroup.Item;
+const Indicator = RadixRadioGroup.Indicator;
+const RadioGroup = RadixRadioGroup.RadioGroup;
+const RadioGroupItem = RadixRadioGroup.RadioGroupItem;
+const RadioGroupIndicator = RadixRadioGroup.RadioGroupIndicator;
+const createRadioGroupScope = RadixRadioGroup.createRadioGroupScope;
+
+export { Indicator, Item, RadioGroup, RadioGroupIndicator, RadioGroupItem, Root, createRadioGroupScope };
+//# sourceMappingURL=radio-group.js.map

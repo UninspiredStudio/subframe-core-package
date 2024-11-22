@@ -1,47 +1,47 @@
-"use strict";
 "use client";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
+'use strict';
+
+var RadixSlider = require('@radix-ui/react-slider');
+var classNames = require('classnames');
+var React = require('react');
+var slider_module = require('./slider.module.css.js');
+
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
     }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var RadixSlider__namespace = /*#__PURE__*/_interopNamespaceDefault(RadixSlider);
+
+const Root = React.forwardRef(function ProgressRoot({ className, children, defaultValue = [27], ...otherProps }, ref) {
+    return (React.createElement(RadixSlider__namespace.Root, { ref: ref, className: classNames(className, slider_module.sliderRoot), defaultValue: defaultValue, ...otherProps }, children));
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Slider = exports.Thumb = exports.Range = exports.Track = exports.Root = void 0;
-const RadixSlider = __importStar(require("@radix-ui/react-slider"));
-const classnames_1 = __importDefault(require("classnames"));
-const react_1 = __importDefault(require("react"));
-const slider_module_css_1 = __importDefault(require("./slider.module.css"));
-exports.Root = react_1.default.forwardRef(function ProgressRoot({ className, children, defaultValue = [27], ...otherProps }, ref) {
-    return (react_1.default.createElement(RadixSlider.Root, { ref: ref, className: (0, classnames_1.default)(className, slider_module_css_1.default.sliderRoot), defaultValue: defaultValue, ...otherProps }, children));
+const Track = React.forwardRef(function Indicator({ className, children, ...otherProps }, ref) {
+    return (React.createElement(RadixSlider__namespace.Track, { className: classNames(className, slider_module.sliderTrack), ref: ref, ...otherProps }, children));
 });
-exports.Track = react_1.default.forwardRef(function Indicator({ className, children, ...otherProps }, ref) {
-    return (react_1.default.createElement(RadixSlider.Track, { className: (0, classnames_1.default)(className, slider_module_css_1.default.sliderTrack), ref: ref, ...otherProps }, children));
+const Range = React.forwardRef(function Indicator({ className, ...otherProps }, ref) {
+    return React.createElement(RadixSlider__namespace.Range, { className: classNames(className, slider_module.sliderRange), ref: ref, ...otherProps });
 });
-exports.Range = react_1.default.forwardRef(function Indicator({ className, ...otherProps }, ref) {
-    return react_1.default.createElement(RadixSlider.Range, { className: (0, classnames_1.default)(className, slider_module_css_1.default.sliderRange), ref: ref, ...otherProps });
+const Thumb = React.forwardRef(function Indicator({ className, ...otherProps }, ref) {
+    return React.createElement(RadixSlider__namespace.Thumb, { className: classNames(className, slider_module.sliderThumb), ref: ref, ...otherProps });
 });
-exports.Thumb = react_1.default.forwardRef(function Indicator({ className, ...otherProps }, ref) {
-    return react_1.default.createElement(RadixSlider.Thumb, { className: (0, classnames_1.default)(className, slider_module_css_1.default.sliderThumb), ref: ref, ...otherProps });
-});
-exports.Slider = { Root: exports.Root, Track: exports.Track, Range: exports.Range, Thumb: exports.Thumb };
+const Slider = { Root, Track, Range, Thumb };
+
+exports.Range = Range;
+exports.Root = Root;
+exports.Slider = Slider;
+exports.Thumb = Thumb;
+exports.Track = Track;
+//# sourceMappingURL=slider.js.map

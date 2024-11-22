@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherCloudCog = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("circle", { cx: 12, cy: 17, r: 3 }),
     React.createElement("path", { d: "M4.2 15.1A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }),
@@ -10,4 +11,6 @@ const SvgFeatherCloudCog = (props) => (React.createElement("svg", { xmlns: "http
     React.createElement("path", { d: "m10.8 14.3-.4-1" }),
     React.createElement("path", { d: "m8.3 18.6 1-.4" }),
     React.createElement("path", { d: "m14.7 15.8 1-.4" })));
-export default SvgFeatherCloudCog;
+
+export { SvgFeatherCloudCog as default };
+//# sourceMappingURL=feather-cloud-cog.js.map

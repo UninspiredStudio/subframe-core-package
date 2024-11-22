@@ -1,51 +1,51 @@
-"use strict";
 "use client";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
+'use strict';
+
+var RadixCollapsible = require('@radix-ui/react-collapsible');
+var reactSlot = require('@radix-ui/react-slot');
+var classNames = require('classnames');
+var React = require('react');
+var collapsible_module = require('./collapsible.module.css.js');
+
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
     }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var RadixCollapsible__namespace = /*#__PURE__*/_interopNamespaceDefault(RadixCollapsible);
+
+const Chevron = React.forwardRef(function CollapsibleChevron({ className, ...otherProps }, ref) {
+    return (React.createElement(reactSlot.Slot, { ref: ref, className: classNames(className, collapsible_module.chevron), ...otherProps }));
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+const Trigger = React.forwardRef(function Trigger({ className, children, ...otherProps }, ref) {
+    return (React.createElement(RadixCollapsible__namespace.Trigger, { className: classNames(className, collapsible_module.trigger), ref: ref, ...otherProps }, children));
+});
+const Content = React.forwardRef(function Content({ className, children, ...otherProps }, ref) {
+    return (React.createElement(RadixCollapsible__namespace.Content, { className: classNames(className, collapsible_module.content), ref: ref, ...otherProps }, children));
+});
+const Root = RadixCollapsible__namespace.Root;
+const Collapsible = {
+    Root,
+    Trigger,
+    Content,
+    Chevron,
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Collapsible = exports.Root = exports.Content = exports.Trigger = exports.Chevron = void 0;
-const RadixCollapsible = __importStar(require("@radix-ui/react-collapsible"));
-const react_slot_1 = require("@radix-ui/react-slot");
-const classnames_1 = __importDefault(require("classnames"));
-const react_1 = __importDefault(require("react"));
-const collapsible_module_css_1 = __importDefault(require("./collapsible.module.css"));
-exports.Chevron = react_1.default.forwardRef(function CollapsibleChevron({ className, ...otherProps }, ref) {
-    return (react_1.default.createElement(react_slot_1.Slot, { ref: ref, className: (0, classnames_1.default)(className, collapsible_module_css_1.default.chevron), ...otherProps }));
-});
-exports.Trigger = react_1.default.forwardRef(function Trigger({ className, children, ...otherProps }, ref) {
-    return (react_1.default.createElement(RadixCollapsible.Trigger, { className: (0, classnames_1.default)(className, collapsible_module_css_1.default.trigger), ref: ref, ...otherProps }, children));
-});
-exports.Content = react_1.default.forwardRef(function Content({ className, children, ...otherProps }, ref) {
-    return (react_1.default.createElement(RadixCollapsible.Content, { className: (0, classnames_1.default)(className, collapsible_module_css_1.default.content), ref: ref, ...otherProps }, children));
-});
-exports.Root = RadixCollapsible.Root;
-exports.Collapsible = {
-    Root: exports.Root,
-    Trigger: exports.Trigger,
-    Content: exports.Content,
-    Chevron: exports.Chevron,
-};
+
+exports.Chevron = Chevron;
+exports.Collapsible = Collapsible;
+exports.Content = Content;
+exports.Root = Root;
+exports.Trigger = Trigger;
+//# sourceMappingURL=collapsible.js.map

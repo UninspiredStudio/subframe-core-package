@@ -1,15 +1,16 @@
 "use client";
-import classNames from "classnames";
-import * as React from "react";
-import AutoSizer from "react-virtualized-auto-sizer";
-import { CartesianGrid as RechartsCartesianGrid, Label as RechartsLabel, Legend as RechartsLegend, Tooltip as RechartsTooltip, XAxis as RechartsXAxis, YAxis as RechartsYAxis, } from "recharts";
-import styles from "./charts.module.css";
+import classNames from 'classnames';
+import * as React from 'react';
+import AutoSizer from 'react-virtualized-auto-sizer';
+import { CartesianGrid as CartesianGrid$1, XAxis as XAxis$1, YAxis as YAxis$1, Tooltip, Legend, Label } from 'recharts';
+import styles from './charts.module.css.js';
+
 /**
  * Colors
  */
 /* Default palette is Blue */
-export const DEFAULT_COLORS = ["3b82f6", "bfdbfe", "2563eb", "93c5fd", "1d4ed8", "60a5fa"];
-export function createColorMap({ categories, colors }) {
+const DEFAULT_COLORS = ["3b82f6", "bfdbfe", "2563eb", "93c5fd", "1d4ed8", "60a5fa"];
+function createColorMap({ categories, colors }) {
     const colorMap = new Map();
     for (let i = 0; i < categories.length; i++) {
         colorMap.set(categories[i], colors[i % colors.length]);
@@ -17,42 +18,42 @@ export function createColorMap({ categories, colors }) {
     return colorMap;
 }
 const ChartContext = React.createContext(undefined);
-export function ChartContextProvider({ categories, colors, dark, children, }) {
+function ChartContextProvider({ categories, colors, dark, children, }) {
     const value = React.useMemo(() => ({ colorMap: createColorMap({ categories, colors }), dark }), [categories, colors, dark]);
     return React.createElement(ChartContext.Provider, { value: value }, children);
 }
-export function useChartContext() {
+function useChartContext() {
     return React.useContext(ChartContext);
 }
-export const AutoSizedChartWrapper = React.forwardRef(function AutoSizedChartWrapper({ className, style, children, ...props }, ref) {
+const AutoSizedChartWrapper = React.forwardRef(function AutoSizedChartWrapper({ className, style, children, ...props }, ref) {
     return (React.createElement("div", { className: classNames(className, styles.root), ref: ref, ...props, style: { ...style, minHeight: 200, minWidth: 300 } },
         React.createElement(AutoSizer, null, ({ height, width }) => children({ height, width }))));
 });
 /**
  * Recharts Wrappers
  */
-export const ChartLabel = RechartsLabel;
-export const CartesianGrid = ({ ref, className, horizontal = true, vertical = false, strokeWidth = 1, ...otherProps }) => {
+const ChartLabel = Label;
+const CartesianGrid = ({ ref, className, horizontal = true, vertical = false, strokeWidth = 1, ...otherProps }) => {
     const { dark } = useChartContext();
-    return (React.createElement(RechartsCartesianGrid, { className: classNames(className, styles.grid, { [styles.dark]: dark }), horizontal: horizontal, vertical: vertical, strokeWidth: strokeWidth, ref: ref, ...otherProps }));
+    return (React.createElement(CartesianGrid$1, { className: classNames(className, styles.grid, { [styles.dark]: dark }), horizontal: horizontal, vertical: vertical, strokeWidth: strokeWidth, ref: ref, ...otherProps }));
 };
-CartesianGrid.displayName = RechartsCartesianGrid.displayName;
-export const XAxis = ({ ref, ...otherProps }) => {
-    return React.createElement(RechartsXAxis, { ref: ref, ...otherProps });
+CartesianGrid.displayName = CartesianGrid$1.displayName;
+const XAxis = ({ ref, ...otherProps }) => {
+    return React.createElement(XAxis$1, { ref: ref, ...otherProps });
 };
-XAxis.displayName = RechartsXAxis.displayName;
+XAxis.displayName = XAxis$1.displayName;
 XAxis.defaultProps = {
-    ...RechartsXAxis.defaultProps,
+    ...XAxis$1.defaultProps,
     axisLine: false,
     tickLine: false,
     padding: { left: 20, right: 20 },
     interval: "equidistantPreserveStart",
 };
-export const YAxis = ({ ref, ...otherProps }) => {
-    return React.createElement(RechartsYAxis, { ref: ref, ...otherProps });
+const YAxis = ({ ref, ...otherProps }) => {
+    return React.createElement(YAxis$1, { ref: ref, ...otherProps });
 };
-YAxis.displayName = RechartsYAxis.displayName;
-YAxis.defaultProps = { ...RechartsYAxis.defaultProps, axisLine: false, tickLine: false, width: 40 };
+YAxis.displayName = YAxis$1.displayName;
+YAxis.defaultProps = { ...YAxis$1.defaultProps, axisLine: false, tickLine: false, width: 40 };
 function DefaultTooltip({ active, colorMap, dark, payload, label }) {
     if (active && payload && payload.length) {
         return (React.createElement("div", { className: classNames(styles.tooltip, { [styles.dark]: dark }) },
@@ -64,13 +65,13 @@ function DefaultTooltip({ active, colorMap, dark, payload, label }) {
     }
     return null;
 }
-export const ChartTooltip = (props) => {
+const ChartTooltip = (props) => {
     const { colorMap, dark } = useChartContext();
-    return (React.createElement(RechartsTooltip, { content: ({ active, payload, label }) => (React.createElement(DefaultTooltip, { active: active, colorMap: colorMap, dark: dark, label: label, payload: payload })), ...props }));
+    return (React.createElement(Tooltip, { content: ({ active, payload, label }) => (React.createElement(DefaultTooltip, { active: active, colorMap: colorMap, dark: dark, label: label, payload: payload })), ...props }));
 };
-ChartTooltip.displayName = RechartsTooltip.displayName;
+ChartTooltip.displayName = Tooltip.displayName;
 ChartTooltip.defaultProps = {
-    ...RechartsTooltip.defaultProps,
+    ...Tooltip.defaultProps,
     cursor: { stroke: "#D1D5DB", strokeWidth: 1 },
     isAnimationActive: false,
 };
@@ -84,9 +85,12 @@ function DefaultLegend({ align, colorMap, dark, payload }) {
         React.createElement("span", { className: styles.dot, style: { backgroundColor: colorMap.get(String(value)) } }),
         React.createElement("span", { className: styles.name }, value))))));
 }
-export const ChartLegend = ({ ref, ...otherProps }) => {
+const ChartLegend = ({ ref, ...otherProps }) => {
     const { colorMap, dark } = useChartContext();
-    return (React.createElement(RechartsLegend, { content: ({ payload }) => (React.createElement(DefaultLegend, { align: otherProps.align, colorMap: colorMap, dark: dark, payload: payload })), ref: ref, ...otherProps }));
+    return (React.createElement(Legend, { content: ({ payload }) => (React.createElement(DefaultLegend, { align: otherProps.align, colorMap: colorMap, dark: dark, payload: payload })), ref: ref, ...otherProps }));
 };
-ChartLegend.displayName = RechartsLegend.displayName;
-ChartLegend.defaultProps = { ...RechartsLegend.defaultProps, align: "right", verticalAlign: "top" };
+ChartLegend.displayName = Legend.displayName;
+ChartLegend.defaultProps = { ...Legend.defaultProps, align: "right", verticalAlign: "top" };
+
+export { AutoSizedChartWrapper, CartesianGrid, ChartContextProvider, ChartLabel, ChartLegend, ChartTooltip, DEFAULT_COLORS, XAxis, YAxis, createColorMap, useChartContext };
+//# sourceMappingURL=charts.js.map

@@ -1,10 +1,11 @@
 "use client";
-import classNames from "classnames";
-import React from "react";
-import styles from "./text.module.css";
-export function Text(props) {
+import classNames from 'classnames';
+import React__default from 'react';
+import styles from './text.module.css.js';
+
+function Text(props) {
     const { className, variant = "body", ellipsis, color = "default", ...otherProps } = props;
-    return (React.createElement("span", { className: classNames(className, {
+    return (React__default.createElement("span", { className: classNames(className, {
             [styles.label]: variant === "label",
             [styles.labelBold]: variant === "label-bold",
             [styles.body]: variant === "body",
@@ -17,3 +18,6 @@ export function Text(props) {
             [styles.colorSubtext]: color === "subtext",
         }), ...otherProps }));
 }
+
+export { Text };
+//# sourceMappingURL=text.js.map

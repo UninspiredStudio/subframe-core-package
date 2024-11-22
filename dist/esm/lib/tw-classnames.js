@@ -1,7 +1,8 @@
-import classNames from "classnames";
-import { createTailwindMerge, getDefaultConfig } from "tailwind-merge";
+import classNames from 'classnames';
+import { createTailwindMerge, getDefaultConfig } from 'tailwind-merge';
+
 // HACK: keep this in sync with the default fonts
-export const SUBFRAME_FONT_MIXINS = [
+const SUBFRAME_FONT_MIXINS = [
     // old font mixins
     "text-label",
     "text-label-bold",
@@ -41,6 +42,9 @@ const customTWMerge = createTailwindMerge(() => {
         },
     };
 });
-export function twClassNames(...args) {
+function twClassNames(...args) {
     return customTWMerge(classNames(...args));
 }
+
+export { SUBFRAME_FONT_MIXINS, twClassNames };
+//# sourceMappingURL=tw-classnames.js.map

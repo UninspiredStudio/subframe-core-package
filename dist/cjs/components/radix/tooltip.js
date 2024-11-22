@@ -1,41 +1,52 @@
-"use strict";
 "use client";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTooltipScope = exports.Trigger = exports.Provider = exports.Portal = exports.Content = exports.Arrow = exports.TooltipTrigger = exports.TooltipProvider = exports.TooltipPortal = exports.TooltipContent = exports.TooltipArrow = exports.Tooltip = exports.Root = void 0;
-const RadixTooltip = __importStar(require("@radix-ui/react-tooltip"));
-exports.Root = RadixTooltip.Root;
-exports.Tooltip = RadixTooltip.Tooltip;
-exports.TooltipArrow = RadixTooltip.TooltipArrow;
-exports.TooltipContent = RadixTooltip.TooltipContent;
-exports.TooltipPortal = RadixTooltip.TooltipPortal;
-exports.TooltipProvider = RadixTooltip.TooltipProvider;
-exports.TooltipTrigger = RadixTooltip.TooltipTrigger;
-exports.Arrow = RadixTooltip.Arrow;
-exports.Content = RadixTooltip.Content;
-exports.Portal = RadixTooltip.Portal;
-exports.Provider = RadixTooltip.Provider;
-exports.Trigger = RadixTooltip.Trigger;
-exports.createTooltipScope = RadixTooltip.createTooltipScope;
+'use strict';
+
+var RadixTooltip = require('@radix-ui/react-tooltip');
+
+function _interopNamespaceDefault(e) {
+	var n = Object.create(null);
+	if (e) {
+		Object.keys(e).forEach(function (k) {
+			if (k !== 'default') {
+				var d = Object.getOwnPropertyDescriptor(e, k);
+				Object.defineProperty(n, k, d.get ? d : {
+					enumerable: true,
+					get: function () { return e[k]; }
+				});
+			}
+		});
+	}
+	n.default = e;
+	return Object.freeze(n);
+}
+
+var RadixTooltip__namespace = /*#__PURE__*/_interopNamespaceDefault(RadixTooltip);
+
+const Root = RadixTooltip__namespace.Root;
+const Tooltip = RadixTooltip__namespace.Tooltip;
+const TooltipArrow = RadixTooltip__namespace.TooltipArrow;
+const TooltipContent = RadixTooltip__namespace.TooltipContent;
+const TooltipPortal = RadixTooltip__namespace.TooltipPortal;
+const TooltipProvider = RadixTooltip__namespace.TooltipProvider;
+const TooltipTrigger = RadixTooltip__namespace.TooltipTrigger;
+const Arrow = RadixTooltip__namespace.Arrow;
+const Content = RadixTooltip__namespace.Content;
+const Portal = RadixTooltip__namespace.Portal;
+const Provider = RadixTooltip__namespace.Provider;
+const Trigger = RadixTooltip__namespace.Trigger;
+const createTooltipScope = RadixTooltip__namespace.createTooltipScope;
+
+exports.Arrow = Arrow;
+exports.Content = Content;
+exports.Portal = Portal;
+exports.Provider = Provider;
+exports.Root = Root;
+exports.Tooltip = Tooltip;
+exports.TooltipArrow = TooltipArrow;
+exports.TooltipContent = TooltipContent;
+exports.TooltipPortal = TooltipPortal;
+exports.TooltipProvider = TooltipProvider;
+exports.TooltipTrigger = TooltipTrigger;
+exports.Trigger = Trigger;
+exports.createTooltipScope = createTooltipScope;
+//# sourceMappingURL=tooltip.js.map

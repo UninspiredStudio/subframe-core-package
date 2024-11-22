@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherBus = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M8 6v6" }),
     React.createElement("path", { d: "M15 6v6" }),
@@ -7,4 +8,6 @@ const SvgFeatherBus = (props) => (React.createElement("svg", { xmlns: "http://ww
     React.createElement("circle", { cx: 7, cy: 18, r: 2 }),
     React.createElement("path", { d: "M9 18h5" }),
     React.createElement("circle", { cx: 16, cy: 18, r: 2 })));
-export default SvgFeatherBus;
+
+export { SvgFeatherBus as default };
+//# sourceMappingURL=feather-bus.js.map

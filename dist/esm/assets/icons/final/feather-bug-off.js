@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherBugOff = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M15 7.13V6a3 3 0 0 0-5.14-2.1L8 2" }),
     React.createElement("path", { d: "M14.12 3.88 16 2" }),
@@ -9,4 +10,6 @@ const SvgFeatherBugOff = (props) => (React.createElement("svg", { xmlns: "http:/
     React.createElement("path", { d: "M12 20v-8" }),
     React.createElement("path", { d: "M6 13H2" }),
     React.createElement("path", { d: "M3 21c0-2.1 1.7-3.9 3.8-4" })));
-export default SvgFeatherBugOff;
+
+export { SvgFeatherBugOff as default };
+//# sourceMappingURL=feather-bug-off.js.map

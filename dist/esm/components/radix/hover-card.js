@@ -1,13 +1,17 @@
 "use client";
-import * as RadixHoverCard from "@radix-ui/react-hover-card";
-export const Arrow = RadixHoverCard.Arrow;
-export const Content = RadixHoverCard.Content;
-export const HoverCard = RadixHoverCard.HoverCard;
-export const HoverCardArrow = RadixHoverCard.HoverCardArrow;
-export const HoverCardContent = RadixHoverCard.HoverCardContent;
-export const HoverCardPortal = RadixHoverCard.HoverCardPortal;
-export const HoverCardTrigger = RadixHoverCard.HoverCardTrigger;
-export const Portal = RadixHoverCard.Portal;
-export const Root = RadixHoverCard.Root;
-export const Trigger = RadixHoverCard.Trigger;
-export const createHoverCardScope = RadixHoverCard.createHoverCardScope;
+import * as RadixHoverCard from '@radix-ui/react-hover-card';
+
+const Arrow = RadixHoverCard.Arrow;
+const Content = RadixHoverCard.Content;
+const HoverCard = RadixHoverCard.HoverCard;
+const HoverCardArrow = RadixHoverCard.HoverCardArrow;
+const HoverCardContent = RadixHoverCard.HoverCardContent;
+const HoverCardPortal = RadixHoverCard.HoverCardPortal;
+const HoverCardTrigger = RadixHoverCard.HoverCardTrigger;
+const Portal = RadixHoverCard.Portal;
+const Root = RadixHoverCard.Root;
+const Trigger = RadixHoverCard.Trigger;
+const createHoverCardScope = RadixHoverCard.createHoverCardScope;
+
+export { Arrow, Content, HoverCard, HoverCardArrow, HoverCardContent, HoverCardPortal, HoverCardTrigger, Portal, Root, Trigger, createHoverCardScope };
+//# sourceMappingURL=hover-card.js.map

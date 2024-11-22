@@ -1,45 +1,43 @@
-"use strict";
 "use client";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
+'use strict';
+
+var RadixProgress = require('@radix-ui/react-progress');
+var classNames = require('classnames');
+var React = require('react');
+var progress_module = require('./progress.module.css.js');
+
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
     }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Progress = exports.Indicator = exports.Root = void 0;
-const RadixProgress = __importStar(require("@radix-ui/react-progress"));
-const classnames_1 = __importDefault(require("classnames"));
-const react_1 = __importDefault(require("react"));
-const progress_module_css_1 = __importDefault(require("./progress.module.css"));
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var RadixProgress__namespace = /*#__PURE__*/_interopNamespaceDefault(RadixProgress);
+
 const DEFAULT_PROGRESS_VALUE = 0;
-const ProgressContext = react_1.default.createContext(DEFAULT_PROGRESS_VALUE);
-exports.Root = react_1.default.forwardRef(function ProgressRoot({ className, children, value, ...otherProps }, ref) {
-    return (react_1.default.createElement(ProgressContext.Provider, { value: value || DEFAULT_PROGRESS_VALUE },
-        react_1.default.createElement(RadixProgress.Root, { ref: ref, ...otherProps, value: value }, children)));
+const ProgressContext = React.createContext(DEFAULT_PROGRESS_VALUE);
+const Root = React.forwardRef(function ProgressRoot({ className, children, value, ...otherProps }, ref) {
+    return (React.createElement(ProgressContext.Provider, { value: value || DEFAULT_PROGRESS_VALUE },
+        React.createElement(RadixProgress__namespace.Root, { ref: ref, ...otherProps, value: value }, children)));
 });
-exports.Indicator = react_1.default.forwardRef(function Indicator({ className, ...otherProps }, ref) {
-    const progress = react_1.default.useContext(ProgressContext);
-    return (react_1.default.createElement(RadixProgress.Indicator, { className: (0, classnames_1.default)(className, progress_module_css_1.default.indicator), ref: ref, asChild: true, style: { transform: `translateX(-${100 - progress}%)` }, ...otherProps }));
+const Indicator = React.forwardRef(function Indicator({ className, ...otherProps }, ref) {
+    const progress = React.useContext(ProgressContext);
+    return (React.createElement(RadixProgress__namespace.Indicator, { className: classNames(className, progress_module.indicator), ref: ref, asChild: true, style: { transform: `translateX(-${100 - progress}%)` }, ...otherProps }));
 });
-exports.Progress = { Root: exports.Root, Indicator: exports.Indicator };
+const Progress = { Root, Indicator };
+
+exports.Indicator = Indicator;
+exports.Progress = Progress;
+exports.Root = Root;
+//# sourceMappingURL=progress.js.map

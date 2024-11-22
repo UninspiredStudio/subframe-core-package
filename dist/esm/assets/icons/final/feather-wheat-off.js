@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherWheatOff = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "m2 22 10-10" }),
     React.createElement("path", { d: "m16 8-1.17 1.17" }),
@@ -10,4 +11,6 @@ const SvgFeatherWheatOff = (props) => (React.createElement("svg", { xmlns: "http
     React.createElement("path", { d: "m16 16-.53.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.49 3.49 0 0 1 1.97-.98" }),
     React.createElement("path", { d: "M18.74 13.09c.26-.15.51-.34.73-.56L21 11l-1.53-1.53a3.5 3.5 0 0 0-4.62-.28" }),
     React.createElement("line", { x1: 2, x2: 22, y1: 2, y2: 22 })));
-export default SvgFeatherWheatOff;
+
+export { SvgFeatherWheatOff as default };
+//# sourceMappingURL=feather-wheat-off.js.map

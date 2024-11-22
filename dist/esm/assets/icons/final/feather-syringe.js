@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherSyringe = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "m18 2 4 4" }),
     React.createElement("path", { d: "m17 7 3-3" }),
@@ -6,4 +7,6 @@ const SvgFeatherSyringe = (props) => (React.createElement("svg", { xmlns: "http:
     React.createElement("path", { d: "m9 11 4 4" }),
     React.createElement("path", { d: "m5 19-3 3" }),
     React.createElement("path", { d: "m14 4 6 6" })));
-export default SvgFeatherSyringe;
+
+export { SvgFeatherSyringe as default };
+//# sourceMappingURL=feather-syringe.js.map

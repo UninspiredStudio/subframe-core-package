@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherPackagePlus = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M16 16h6" }),
     React.createElement("path", { d: "M19 13v6" }),
@@ -6,4 +7,6 @@ const SvgFeatherPackagePlus = (props) => (React.createElement("svg", { xmlns: "h
     React.createElement("path", { d: "m7.5 4.27 9 5.15" }),
     React.createElement("polyline", { points: "3.29 7 12 12 20.71 7" }),
     React.createElement("line", { x1: 12, x2: 12, y1: 22, y2: 12 })));
-export default SvgFeatherPackagePlus;
+
+export { SvgFeatherPackagePlus as default };
+//# sourceMappingURL=feather-package-plus.js.map

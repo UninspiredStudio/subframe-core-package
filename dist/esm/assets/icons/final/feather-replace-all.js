@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+
 const SvgFeatherReplaceAll = (props) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", ...props },
     React.createElement("path", { d: "M14 4c0-1.1.9-2 2-2" }),
     React.createElement("path", { d: "M20 2c1.1 0 2 .9 2 2" }),
@@ -9,4 +10,6 @@ const SvgFeatherReplaceAll = (props) => (React.createElement("svg", { xmlns: "ht
     React.createElement("rect", { width: 8, height: 8, x: 2, y: 14, rx: 2 }),
     React.createElement("path", { d: "M14 14c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2" }),
     React.createElement("path", { d: "M20 14c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2" })));
-export default SvgFeatherReplaceAll;
+
+export { SvgFeatherReplaceAll as default };
+//# sourceMappingURL=feather-replace-all.js.map
